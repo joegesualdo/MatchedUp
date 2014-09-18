@@ -18,6 +18,7 @@
 		E9E2B10119CB219E002EEA55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B10019CB219E002EEA55 /* Keys.plist */; };
 		E9E2B10519CB326F002EEA55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B10419CB326F002EEA55 /* Constants.m */; };
 		E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F1919CB482700F1C27D /* ProfileViewController.m */; };
+		E9EB4F1E19CB4C2400F1C27D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F1D19CB4C2400F1C27D /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E9E2B10419CB326F002EEA55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		E9EB4F1819CB482700F1C27D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E9EB4F1919CB482700F1C27D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E9EB4F1C19CB4C2400F1C27D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E9EB4F1D19CB4C2400F1C27D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,6 +218,7 @@
 		D58CF190082F4859A5742836 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB4F1B19CB4C1A00F1C27D /* Home */,
 				E9EB4F1719CB481000F1C27D /* Profile */,
 				E9E2B0FA19CB15E6002EEA55 /* Login */,
 			);
@@ -253,6 +257,15 @@
 				E9EB4F1919CB482700F1C27D /* ProfileViewController.m */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		E9EB4F1B19CB4C1A00F1C27D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB4F1C19CB4C2400F1C27D /* HomeViewController.h */,
+				E9EB4F1D19CB4C2400F1C27D /* HomeViewController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
@@ -470,6 +483,7 @@
 				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
 				E9E2B10519CB326F002EEA55 /* Constants.m in Sources */,
 				E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */,
+				E9EB4F1E19CB4C2400F1C27D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -75,7 +75,7 @@
             }
         } else {
             [self updateUserInformation];
-            [self performSegueWithIdentifier:@"loginToTabBarSegue" sender:self];
+            [self performSegueWithIdentifier:@"loginToHomeSegu" sender:self];
         }
     }];
 }
