@@ -1,6 +1,8 @@
 PODS:
   - Bolts (1.1.2)
   - Expecta (0.3.1)
+  - Facebook-iOS-SDK (3.18.0):
+    - Bolts
   - OCMock (3.1.1)
   - OHHTTPStubs (3.1.5):
     - OHHTTPStubs/Core
@@ -11,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Expecta
+  - Facebook-iOS-SDK
   - OCMock
   - OHHTTPStubs
   - Parse
@@ -19,6 +22,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  Facebook-iOS-SDK: fa12c51cc57bfb6f92e47793c9d4d2c65bc92741
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   OHHTTPStubs: c1e362552b71b81e1deb7a80f44c51585b946c43
   Parse: 0297c37bae4c6ffbc9235bd592b9c9844b91dd28

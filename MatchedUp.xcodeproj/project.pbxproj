@@ -15,7 +15,7 @@
 		CCFC21255AB345FA8C9EC40C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74124964C24542F380E2EEA7 /* AppDelegate.m */; };
 		E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */; };
 		E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */; };
-		E9E2B0FF19CB1A9E002EEA55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0FE19CB1A9E002EEA55 /* Keys.plist */; };
+		E9E2B10119CB219E002EEA55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B10019CB219E002EEA55 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E9E2B0FB19CB15FD002EEA55 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		E9E2B0FE19CB1A9E002EEA55 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Keys.plist; sourceTree = "<group>"; };
+		E9E2B10019CB219E002EEA55 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,10 +83,10 @@
 		0BEBD613D083474CB908FA9A /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E9E2B0FE19CB1A9E002EEA55 /* Keys.plist */,
 				35C393EA7E4D46B4AC705D2B /* MatchedUp-Info.plist */,
 				6D2773AE25CD434BB9DE6880 /* MatchedUp-Prefix.pch */,
 				23D17FE5D8F54323ABC460E3 /* main.m */,
+				E9E2B10019CB219E002EEA55 /* Keys.plist */,
 			);
 			path = "Other-Sources";
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E2B0FF19CB1A9E002EEA55 /* Keys.plist in Resources */,
+				E9E2B10119CB219E002EEA55 /* Keys.plist in Resources */,
 				E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */,
 				6BBB74730B6D4626A6E9A5C9 /* Images.xcassets in Resources */,
 			);
