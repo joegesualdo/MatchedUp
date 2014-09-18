@@ -16,6 +16,7 @@
 		E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */; };
 		E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */; };
 		E9E2B10119CB219E002EEA55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B10019CB219E002EEA55 /* Keys.plist */; };
+		E9E2B10519CB326F002EEA55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B10419CB326F002EEA55 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		E9E2B0FB19CB15FD002EEA55 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E9E2B10019CB219E002EEA55 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		E9E2B10319CB326F002EEA55 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E9E2B10419CB326F002EEA55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +245,8 @@
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				E9E2B10319CB326F002EEA55 /* Constants.h */,
+				E9E2B10419CB326F002EEA55 /* Constants.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				CCFC21255AB345FA8C9EC40C /* AppDelegate.m in Sources */,
 				6C72C30B078E48F38FB361F5 /* main.m in Sources */,
 				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
+				E9E2B10519CB326F002EEA55 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -85,30 +85,29 @@
     FBRequest *request = [FBRequest requestForMe];
     // make that request you defined above
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        NSLog(@"%@", result);
         if (!error) {
             NSDictionary *userDictionary = (NSDictionary *)result;
             NSMutableDictionary *userProfile = [[NSMutableDictionary alloc]initWithCapacity:8];
             if (userDictionary[@"name"]) {
-                userProfile[@"name"] = userDictionary[@"name"];
+                userProfile[kUserProfileNameKey]= userDictionary[@"name"];
             }
             if (userDictionary[@"first_name"]) {
-                userProfile[@"first_name"] = userDictionary[@"first_name"];
+                userProfile[kUserProfileFirstNameKey]= userDictionary[@"first_name"];
             }
             if (userDictionary[@"location"][@"name"]) {
-                userProfile[@"location"] = userDictionary[@"location"][@"name"];
+                userProfile[kUserProfileLocationKey] = userDictionary[@"location"][@"name"];
             }
             if (userDictionary[@"gender"]) {
-                userProfile[@"gender"] = userDictionary[@"gender"];
+                userProfile[kUserProfileGenderKey] = userDictionary[@"gender"];
             }
             if (userDictionary[@"birthday"]) {
-                userProfile[@"birthday"] = userDictionary[@"birthday"];
+                userProfile[kUserProfileBirthdayKey] = userDictionary[@"birthday"];
             }
             if (userDictionary[@"interested_in"]) {
-                userProfile[@"interested_in"] = userDictionary[@"interested_in"];
+                userProfile[kUserProfileInterestedInKey] = userDictionary[@"interested_in"];
             }
             
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+            [[PFUser currentUser] setObject:userProfile forKey:kUserProfileKey];
             [[PFUser currentUser] saveInBackground];
         } else {
             NSLog(@"Error in FB: %@", error);
