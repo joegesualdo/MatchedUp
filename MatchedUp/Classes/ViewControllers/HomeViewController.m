@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "TestUser.h"
 
 @interface HomeViewController ()
 
@@ -51,6 +52,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Uncomment this when you want to create anther test user
+//    [TestUser saveTestUserToParse];
+    
     // Don't want user to immediately press the like, dislike, or info untile we get all the info from the network
     self.likeButton.enabled = NO;
     self.dislikeButton.enabled = NO;
@@ -59,6 +63,7 @@
     self.currentPhotoIndex = 0;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    [query whereKey:kPhotoUserKey notEqualTo:[PFUser currentUser]];
     // include key will also include the User object from the parse User
     // When we dowload the photo we should also download the user
     [query includeKey:@"user"];
@@ -198,7 +203,7 @@
     [likeActivity setObject:@"like" forKey:@"type"];
     [likeActivity setObject:[PFUser currentUser] forKey:@"fromUser"];
     [likeActivity setObject:[self.photo objectForKey:@"user"] forKey:@"toUser"];
-    [likeActivity setObject:self.photo forKey:@"Photo"];
+    [likeActivity setObject:self.photo forKey:@"photo"];
     [likeActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         self.isLikedByCurrentUser = YES;
         self.isDislikedByCurrentUser = NO;

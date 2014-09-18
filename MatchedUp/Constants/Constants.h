@@ -14,7 +14,11 @@
 
 @interface Constants : NSObject
 
+
 #pragma mark - User Class
+
+extern NSString *const kUserTagLineKey;
+
 // as soon as our program starts, for the entrie life span of the program, we will keep a pointer in memory whos variable name is kUserProfileKey.
 // BUT we CAN change the value of the constant;
 extern NSString *const kUserProfileKey;
@@ -33,5 +37,16 @@ extern NSString *const kUserProfileAgeKey;
 extern NSString *const kPhotoClassKey;
 extern NSString *const kPhotoUserKey;
 extern NSString *const kPhotoPictureKey;
+
+#pragma mark - Activity Class
+
+extern NSString *const kActivityClassKey;
+extern NSString *const kActivityTypeKey;
+extern NSString *const kActivityFromUserKey;
+extern NSString *const kActivityToUserKey;
+extern NSString *const kActivityPhotoKey;
+extern NSString *const kActivityTypeLikeKey;
+extern NSString *const kActivityTypeDislikeKey;
+
 
 @end

@@ -21,6 +21,7 @@
 		E9EB4F2219CB51FF00F1C27D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2119CB51FF00F1C27D /* SettingsViewController.m */; };
 		E9EB4F2619CB53EF00F1C27D /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2519CB53EF00F1C27D /* EditProfileViewController.m */; };
 		E9EB4F2A19CB55F900F1C27D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2919CB55F900F1C27D /* ProfileViewController.m */; };
+		E9EB4F2E19CB73DE00F1C27D /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2D19CB73DE00F1C27D /* TestUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		E9EB4F2519CB53EF00F1C27D /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		E9EB4F2819CB55F900F1C27D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		E9EB4F2919CB55F900F1C27D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		E9EB4F2C19CB73DE00F1C27D /* TestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUser.h; sourceTree = "<group>"; };
+		E9EB4F2D19CB73DE00F1C27D /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +190,7 @@
 		A5789795975941BE828DA1E4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB4F2B19CB73C000F1C27D /* TestUsers */,
 				F2786DE5CC8540BCA4606B11 /* Controllers */,
 				DFA269F605F84BAD80980803 /* DataSources */,
 				ADCE9C2FA3814352AF7D9663 /* Delegates */,
@@ -292,6 +296,15 @@
 				E9EB4F2919CB55F900F1C27D /* ProfileViewController.m */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		E9EB4F2B19CB73C000F1C27D /* TestUsers */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB4F2C19CB73DE00F1C27D /* TestUser.h */,
+				E9EB4F2D19CB73DE00F1C27D /* TestUser.m */,
+			);
+			name = TestUsers;
 			sourceTree = "<group>";
 		};
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
@@ -508,6 +521,7 @@
 				6C72C30B078E48F38FB361F5 /* main.m in Sources */,
 				E9EB4F2A19CB55F900F1C27D /* ProfileViewController.m in Sources */,
 				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
+				E9EB4F2E19CB73DE00F1C27D /* TestUser.m in Sources */,
 				E9E2B10519CB326F002EEA55 /* Constants.m in Sources */,
 				E9EB4F2619CB53EF00F1C27D /* EditProfileViewController.m in Sources */,
 				E9EB4F1E19CB4C2400F1C27D /* HomeViewController.m in Sources */,
