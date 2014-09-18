@@ -20,6 +20,7 @@
 		E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F1919CB482700F1C27D /* ProfileViewController.m */; };
 		E9EB4F1E19CB4C2400F1C27D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F1D19CB4C2400F1C27D /* HomeViewController.m */; };
 		E9EB4F2219CB51FF00F1C27D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2119CB51FF00F1C27D /* SettingsViewController.m */; };
+		E9EB4F2619CB53EF00F1C27D /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F2519CB53EF00F1C27D /* EditProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		E9EB4F1D19CB4C2400F1C27D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E9EB4F2019CB51FF00F1C27D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		E9EB4F2119CB51FF00F1C27D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E9EB4F2419CB53EF00F1C27D /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		E9EB4F2519CB53EF00F1C27D /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -221,6 +224,7 @@
 		D58CF190082F4859A5742836 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB4F2319CB53DD00F1C27D /* EditProfile */,
 				E9EB4F1F19CB51EE00F1C27D /* Settings */,
 				E9EB4F1B19CB4C1A00F1C27D /* Home */,
 				E9EB4F1719CB481000F1C27D /* Profile */,
@@ -279,6 +283,15 @@
 				E9EB4F2119CB51FF00F1C27D /* SettingsViewController.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		E9EB4F2319CB53DD00F1C27D /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB4F2419CB53EF00F1C27D /* EditProfileViewController.h */,
+				E9EB4F2519CB53EF00F1C27D /* EditProfileViewController.m */,
+			);
+			name = EditProfile;
 			sourceTree = "<group>";
 		};
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
@@ -495,6 +508,7 @@
 				6C72C30B078E48F38FB361F5 /* main.m in Sources */,
 				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
 				E9E2B10519CB326F002EEA55 /* Constants.m in Sources */,
+				E9EB4F2619CB53EF00F1C27D /* EditProfileViewController.m in Sources */,
 				E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */,
 				E9EB4F1E19CB4C2400F1C27D /* HomeViewController.m in Sources */,
 				E9EB4F2219CB51FF00F1C27D /* SettingsViewController.m in Sources */,

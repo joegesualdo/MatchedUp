@@ -247,6 +247,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editProfileButtonPressed:" destination="JxM-RR-V5o" eventType="touchUpInside" id="OjG-Wb-clN"/>
+                                    <segue destination="Mzi-9c-u8S" kind="push" id="rEu-qR-s3u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -265,6 +266,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zU5-Wk-so9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="-585"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="xJT-Cy-E0k">
+            <objects>
+                <viewController id="Mzi-9c-u8S" customClass="EditProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IbP-24-eSb"/>
+                        <viewControllerLayoutGuide type="bottom" id="KLW-gV-EAK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xqb-Ok-ZNg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JHh-MU-PqL">
+                                <rect key="frame" x="20" y="110" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why are you awesome?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY8-uA-cuS">
+                                <rect key="frame" x="20" y="81" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7l-pa-YEZ">
+                                <rect key="frame" x="20" y="268" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gUs-0U-ADR">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="PDs-k4-bIm">
+                            <connections>
+                                <action selector="saveBarButtonItemPressed:" destination="Mzi-9c-u8S" id="o52-RT-S2p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profilePictureImageView" destination="m7l-pa-YEZ" id="xLr-n4-LeD"/>
+                        <outlet property="saveBarButtonItem" destination="PDs-k4-bIm" id="Dyl-Td-ipP"/>
+                        <outlet property="tagLineTextView" destination="JHh-MU-PqL" id="EDH-em-MCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKJ-Fn-c2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1498" y="-585"/>
         </scene>
         <!--Profile View Controller - Profile-->
         <scene sceneID="uuG-rm-zCO">
