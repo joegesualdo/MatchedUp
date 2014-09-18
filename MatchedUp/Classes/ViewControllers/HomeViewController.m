@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tagLineImage;
+@property (weak, nonatomic) IBOutlet UILabel *tagLineLabel;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property (weak, nonatomic) IBOutlet UIButton *dislikeButton;
@@ -62,6 +62,8 @@
             self.photos = objects;
             // We created this method below
             [self queryForCurrentPhotoIndex];
+            // we update the view outlets
+            [self updateView];
         } else {
             NSLog(@"Error: %@", error);
         }
@@ -121,6 +123,14 @@
             }
         }];
     }
+}
+
+-(void)updateView
+{
+    // We can get the user fromt he photo, because on our query above we included key for user
+    self.firstNameLabel.text = self.photo[@"user"][@"profile"][@"firstName"];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", self.photo[@"user"][@"profile"][@"age"]];
+    self.tagLineLabel.text = self.photo[@"user"][@"tagLine"];
 }
 
 @end

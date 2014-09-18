@@ -136,7 +136,7 @@
                         <outlet property="likeButton" destination="b8Z-gl-DG3" id="wk8-5p-vw1"/>
                         <outlet property="photoImageView" destination="N3p-Tw-C64" id="F9b-Xq-pTD"/>
                         <outlet property="settingsBarButtonItem" destination="amf-ek-SHm" id="pK8-qq-qND"/>
-                        <outlet property="tagLineImage" destination="eSO-uU-uYV" id="NFH-sE-9B8"/>
+                        <outlet property="tagLineLabel" destination="eSO-uU-uYV" id="mzX-I4-Gdi"/>
                         <segue destination="yhi-9e-oyB" kind="push" identifier="homeToProfileSegue" id="ey6-Kf-K0h"/>
                     </connections>
                 </viewController>
