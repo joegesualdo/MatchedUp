@@ -30,6 +30,12 @@
 - (IBAction)dislikeButtonPressed:(UIButton *)sender;
 - (IBAction)infoButtonPressed:(UIButton *)sender;
 
+// We are going to store all the photos from other users in this photos property
+@property(strong,nonatomic)NSArray *photos;
+@property(strong,nonatomic)PFObject *photo;
+// This will store the current photo your looking at
+@property(nonatomic)int currentPhotoIndex;
+
 @end
 
 @implementation HomeViewController
@@ -39,6 +45,28 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Don't want user to immediately press the like, dislike, or info untile we get all the info from the network
+    self.likeButton.enabled = NO;
+    self.dislikeButton.enabled = NO;
+    self.infoButton.enabled = NO;
+    
+    self.currentPhotoIndex = 0;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Photo"];
+    // include key will also include the User object from the parse User
+    // When we dowload the photo we should also download the user
+    [query includeKey:@"user"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.photos = objects;
+            // We created this method below
+            [self queryForCurrentPhotoIndex];
+        } else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,4 +99,28 @@
 
 - (IBAction)infoButtonPressed:(UIButton *)sender {
 }
+
+#pragma mark - Helper Methods
+
+// query for current photo index to get back PFFile that will store the data for the image we want to display for our use
+-(void)queryForCurrentPhotoIndex
+{
+    // we first chck if we have photos
+    if ([self.photos count] > 0) {
+        self.photo = self.photos[self.currentPhotoIndex];
+        // access the value for the key image to get back a PFFile
+        // this is just a pointer to the file
+        PFFile *file = self.photo[@"image"];
+        // this will actually get the file
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:data];
+                self.photoImageView.image = image;
+            } else {
+                NSLog(@"%@",error);
+            }
+        }];
+    }
+}
+
 @end
