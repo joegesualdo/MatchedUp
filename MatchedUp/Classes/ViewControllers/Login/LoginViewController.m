@@ -19,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.activityIndicator.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,5 +41,36 @@
 */
 
 - (IBAction)loginWithFacebook:(UIButton *)sender {
+    // Grab information from user that logs in
+    // We are setting up an array that lists everything we want from a users facebook. Full list can be found here: https://developers.facebook.com/docs/facebook-login/permissions/v2.1
+    // This is where you add, remove permissions
+    NSArray *permissionsArray = @[@"user_about_me", @"user_interests", @"user_relationships", @"user_birthday", @"user_location", @"user_relationship_details"];
+    
+    // shows and starts activity indicator
+    self.activityIndicator.hidden = NO;
+    [self.activityIndicator startAnimating];
+    
+    // This will return a PFUser
+    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        
+        // This will hiden and stop animating the activity indicator when block returns with a response
+        self.activityIndicator.hidden = YES;
+        [self.activityIndicator stopAnimating];
+        
+        if (!user) {
+            if (!error) {
+                // This is how we tell if a user pressed cancel : if !user and !error
+                UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Log In Error" message:@"The Facebook Login was Cancelled" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [alertView show];
+            } else {
+                // this will be called if we didn't get a user back and there was and error
+                UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [alertView show];
+                
+            }
+        } else {
+            [self performSegueWithIdentifier:@"loginToTabBarSegue" sender:self];
+        }
+    }];
 }
 @end
