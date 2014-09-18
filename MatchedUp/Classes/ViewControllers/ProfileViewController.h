@@ -10,6 +10,4 @@
 
 @interface ProfileViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
-
 @end
