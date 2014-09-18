@@ -17,6 +17,7 @@
 		E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */; };
 		E9E2B10119CB219E002EEA55 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B10019CB219E002EEA55 /* Keys.plist */; };
 		E9E2B10519CB326F002EEA55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B10419CB326F002EEA55 /* Constants.m */; };
+		E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EB4F1919CB482700F1C27D /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		E9E2B10019CB219E002EEA55 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E9E2B10319CB326F002EEA55 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E9E2B10419CB326F002EEA55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E9EB4F1819CB482700F1C27D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		E9EB4F1919CB482700F1C27D /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -212,6 +215,7 @@
 		D58CF190082F4859A5742836 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB4F1719CB481000F1C27D /* Profile */,
 				E9E2B0FA19CB15E6002EEA55 /* Login */,
 			);
 			path = ViewControllers;
@@ -240,6 +244,15 @@
 				E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E9EB4F1719CB481000F1C27D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB4F1819CB482700F1C27D /* ProfileViewController.h */,
+				E9EB4F1919CB482700F1C27D /* ProfileViewController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
@@ -456,6 +469,7 @@
 				6C72C30B078E48F38FB361F5 /* main.m in Sources */,
 				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
 				E9E2B10519CB326F002EEA55 /* Constants.m in Sources */,
+				E9EB4F1A19CB482700F1C27D /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
