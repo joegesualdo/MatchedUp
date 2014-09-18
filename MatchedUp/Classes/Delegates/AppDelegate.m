@@ -31,7 +31,10 @@
     return YES;
 }
 
+#pragma mark - Parse/Facebook requirements
+
 // TODO: What is this? It's required for facebook sdk & ParseFAcebook sdk
+// This was in the Parse facebook guide: https://www.parse.com/docs/ios_guide#fbusers/iOS
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -39,7 +42,15 @@
     // supports single login feature for facebook sdk
     // This helps use setup and instance of PFFacebook Utilis
     // attempt to extract a token from the url
-    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:[PFFacebookUtils session]];
+}
+
+// TODO: What is this? It's required for facebook sdk & ParseFAcebook sdk
+// This was in the Parse facebook guide: https://www.parse.com/docs/ios_guide#fbusers/iOS
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
 @end
