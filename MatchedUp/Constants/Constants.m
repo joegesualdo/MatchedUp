@@ -18,7 +18,9 @@ NSString *const kUserProfileLocationKey     = @"location";
 NSString *const kUserProfileGenderKey       = @"gender";
 NSString *const kUserProfileBirthdayKey     = @"birthday";
 NSString *const kUserProfileInterestedInKey = @"interestedIn";
-NSString *const kUserProfilePictureURL= @"pictureURL";
+NSString *const kUserProfilePictureURL      = @"pictureURL";
+NSString *const kUserProfileAgeKey          = @"age";
+NSString *const kUserProfileRelationshipStatusKey = @"relationshipStatus";
 
 NSString *const kPhotoClassKey   = @"Photo";
 NSString *const kPhotoUserKey    = @"user";

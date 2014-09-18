@@ -122,9 +122,22 @@
             }
             if (userDictionary[@"birthday"]) {
                 userProfile[kUserProfileBirthdayKey] = userDictionary[@"birthday"];
+                // Now we want to get the age based off the birthday
+                // convert the string that we get in brithday to a nicely formated date
+                NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+                [formatter setDateStyle:NSDateFormatterShortStyle];
+                NSDate *date = [formatter dateFromString:userDictionary[@"birthday"]];
+                NSDate *now = [NSDate date];
+                NSTimeInterval seconds = [now timeIntervalSinceDate:date];
+                int age = seconds/31536000;
+                //convert age into NSNumber
+                userProfile[kUserProfileAgeKey] = @(age);
             }
             if (userDictionary[@"interested_in"]) {
                 userProfile[kUserProfileInterestedInKey] = userDictionary[@"interested_in"];
+            }
+            if (userDictionary[@"relationship_status"]) {
+                userProfile[kUserProfileRelationshipStatusKey] = userDictionary[@"relationship_status"];
             }
             //absoluteString converts NSURL to NSString
             if ([pictureURL absoluteString]) {
