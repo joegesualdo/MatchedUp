@@ -12,6 +12,7 @@
 		B3AD821AE08741E9AC1A193C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCAA2DF7DC242F9AF793814 /* Foundation.framework */; };
 		BE91463476444A4C95457CB7 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6FEA031F44345B5585515 /* libPods-unit_tests.a */; };
 		CCFC21255AB345FA8C9EC40C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74124964C24542F380E2EEA7 /* AppDelegate.m */; };
+		E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		74124964C24542F380E2EEA7 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		927F6AD5C5BD4619BB07554B /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		9EC6FEA031F44345B5585515 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		A3C23D32312E43FDB357D10A /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */,
 				6BBB74730B6D4626A6E9A5C9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
