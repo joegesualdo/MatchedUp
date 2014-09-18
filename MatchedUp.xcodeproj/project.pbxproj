@@ -13,6 +13,7 @@
 		BE91463476444A4C95457CB7 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC6FEA031F44345B5585515 /* libPods-unit_tests.a */; };
 		CCFC21255AB345FA8C9EC40C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74124964C24542F380E2EEA7 /* AppDelegate.m */; };
 		E9E2B0F919CB1535002EEA55 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */; };
+		E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 		927F6AD5C5BD4619BB07554B /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		9EC6FEA031F44345B5585515 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E2B0F819CB1535002EEA55 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E9E2B0FB19CB15FD002EEA55 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F70DBE4552C641049C4D89ED /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +200,7 @@
 		D58CF190082F4859A5742836 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9E2B0FA19CB15E6002EEA55 /* Login */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +219,15 @@
 			children = (
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		E9E2B0FA19CB15E6002EEA55 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2B0FB19CB15FD002EEA55 /* LoginViewController.h */,
+				E9E2B0FC19CB15FD002EEA55 /* LoginViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		ED032F3C05AC4C039CF461A9 /* Constants */ = {
@@ -394,6 +407,7 @@
 			files = (
 				CCFC21255AB345FA8C9EC40C /* AppDelegate.m in Sources */,
 				6C72C30B078E48F38FB361F5 /* main.m in Sources */,
+				E9E2B0FD19CB15FD002EEA55 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
