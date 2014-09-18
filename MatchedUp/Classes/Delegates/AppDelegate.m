@@ -10,4 +10,21 @@
 
 @implementation AppDelegate
 
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Get the dictionary from our Keys.plist file. This file stores all our secret api credentials
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
+    
+    
+    // Get and set Parse credentials
+    NSString *parseApplicationId = [dictionary objectForKey:@"parseApplicationId"];
+    NSString *parseClientKey = [dictionary objectForKey:@"parseClientKey"];
+    //add your parse keys here
+    [Parse setApplicationId:parseApplicationId
+                  clientKey:parseClientKey];
+    
+    
+    return YES;
+}
+
 @end

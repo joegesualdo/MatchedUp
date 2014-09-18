@@ -30,3 +30,6 @@ Pods
 # AppCode specific files
 .idea/
 *.iml
+
+# Secret keys
+*Keys.plist
