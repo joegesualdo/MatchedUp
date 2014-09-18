@@ -52,8 +52,8 @@
     // Do any additional setup after loading the view.
     
     // Don't want user to immediately press the like, dislike, or info untile we get all the info from the network
-//    self.likeButton.enabled = NO;
-//    self.dislikeButton.enabled = NO;
+    self.likeButton.enabled = NO;
+    self.dislikeButton.enabled = NO;
     self.infoButton.enabled = NO;
     
     self.currentPhotoIndex = 0;
@@ -127,6 +127,45 @@
                 self.photoImageView.image = image;
             } else {
                 NSLog(@"%@",error);
+            }
+        }];
+        
+        // this get's all the likes
+        PFQuery *queryForLike = [PFQuery queryWithClassName:@"Activity"];
+        [queryForLike whereKey:@"type" equalTo:@"like"];
+        [queryForLike whereKey:@"photo" equalTo:self.photo];
+        [queryForLike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+        
+        // this get's all the likes
+        PFQuery *queryForDislike = [PFQuery queryWithClassName:@"Activity"];
+        [queryForDislike whereKey:@"type" equalTo:@"dislike"];
+        [queryForDislike whereKey:@"photo" equalTo:self.photo];
+        [queryForDislike whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+        
+        // this lets you do both queries above simultatniously
+        PFQuery *likeAndDislikeQuery = [PFQuery orQueryWithSubqueries:@[queryForLike, queryForDislike]];
+        [likeAndDislikeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                self.activities = [objects mutableCopy];
+                // if you have no activities than that user has neither like or dislike user
+                if ([self.activities count] == 0) {
+                    self.isLikedByCurrentUser = NO;
+                    self.isDislikedByCurrentUser = NO;
+                } else {
+                    // Can only have one activity, like or dislike.
+                    PFObject *activity = self.activities[0];
+                    if ([activity[@"type"] isEqualToString:@"like"]) {
+                        self.isLikedByCurrentUser = YES;
+                        self.isDislikedByCurrentUser = NO;
+                    } else if ([activity[@"type"] isEqualToString:@"lik"]){
+                        self.isLikedByCurrentUser = NO;
+                        self.isDislikedByCurrentUser = YES;
+                    } else {
+                        // some other object
+                    }
+                }
+                self.likeButton.enabled = YES;
+                self.dislikeButton.enabled = YES;
             }
         }];
     }
