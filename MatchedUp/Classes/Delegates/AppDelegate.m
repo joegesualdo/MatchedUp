@@ -23,17 +23,23 @@
     [Parse setApplicationId:parseApplicationId
                   clientKey:parseClientKey];
     
+    //setup parse with facebook. This is a singleton
+    [PFFacebookUtils initializeFacebook];
+    
+    
     
     return YES;
 }
 
-// This was part of the facebook test
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication
-//         annotation:(id)annotation {
-//    // attempt to extract a token from the url
-//    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
-//}
+// TODO: What is this? It's required for facebook sdk & ParseFAcebook sdk
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // supports single login feature for facebook sdk
+    // This helps use setup and instance of PFFacebook Utilis
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
 
 @end

@@ -2,6 +2,7 @@ platform :ios, '7.0'
 
 pod 'Parse'
 pod 'Facebook-iOS-SDK'
+pod 'ParseFacebookUtils'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
